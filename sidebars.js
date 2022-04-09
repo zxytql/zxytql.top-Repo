@@ -25,7 +25,7 @@ const sidebars = {
     {
       type: 'category',
       label: '高效工作指南',
-      items: ['高效工作指南/coding'],
+      items: ['高效工作指南/coding','高效工作指南/CLion-STM32'],
     },
     {
       type: 'category',
