@@ -91,7 +91,9 @@ STM32作为我做各种开发的主力MCU，以前都是使用Keil5做开发的�
 
 5. **arm-none-eabi-gcc**
 
-   在官网下载压缩包，解压到一个文件夹中：
+   在<a href = "https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads">官网</a>下载压缩包，解压到一个文件夹中：
+   
+   ![arm-none-eabi-gcc-1](./assets/CLion-STM32/arm-none-eabi-gcc-1.png)
 
 ![arm-1](./assets/CLion-STM32/arm-1.png)
 
