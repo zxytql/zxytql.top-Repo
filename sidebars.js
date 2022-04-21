@@ -24,14 +24,14 @@ const sidebars = {
   	},
     {
       type: 'category',
-      label: '高效工作指南',
-      items: ['高效工作指南/coding','高效工作指南/CLion-STM32'],
+      label: '开发效率UP！',
+      items: ['开发效率UP！/coding','开发效率UP！/CLion-STM32'],
     },
-    {
-      type: 'category',
-      label: '秘密基地',
-      items: ['秘密基地/myLove'],
-    },
+    // {
+    //   type: 'category',
+    //   label: '秘密基地',
+    //   items: ['秘密基地/myLove'],
+    // },
   	],
   // But you can create a sidebar manually
   /*
