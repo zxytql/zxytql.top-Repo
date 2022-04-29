@@ -20,12 +20,12 @@ const sidebars = {
   	{
   	  type: 'category',
   	  label: '树莓派开发 - Raspi',
-  	  items: ['树莓派开发 - Raspi/openwrt','树莓派开发 - Raspi/test1'],
+  	  items: ['Raspi-Openwrt-Build'],
   	},
     {
       type: 'category',
       label: '开发效率UP！',
-      items: ['开发效率UP！/coding','开发效率UP！/CLion-STM32'],
+      items: ['CLion-STM32-Development'],
     },
     // {
     //   type: 'category',

@@ -1,5 +1,5 @@
 ---
-id: openwrt
+id: Raspi-Openwrt-Build
 title: 树莓派3B/4B编译安装OpenWrt软路由
 ---
 
@@ -25,58 +25,58 @@ title: 树莓派3B/4B编译安装OpenWrt软路由
 
 在开始编译之前，我们需要准备一个Ubuntu环境，版本建议选择18 LTS。配置环境可以使用VirtualBox虚拟机，也可以用云服务器（推荐）。这里多说两句，为啥不用VMware？因为这个软件装上Ubuntu会莫名其妙黑屏，网上的解决方法我都试过了也不行，而且VirtualBox是开源的，免费。然后云服务器我用的是阿里云的学生机，做10道题可以免费用两个月。因为编译过程会自动下载Packegs并且产生很多文件，配置的Ubuntu系统建议留下至少30GB空间。关于怎么安装Ubuntu我在这里就不在赘述了，网上教程已经很多了。
 
-![](./assets/openwrt/1.png)
+![](./assets/Raspi-Openwrt-Build/1.png)
 
 在安装好Ubuntu后，我们需要下载OpenWrt源码。在这里推荐<a href="https://github.com/coolsnowwolf/lede" target="_blank" rel="noopener">Lean的源码</a>，更新迅速并且很稳定。在源码仓库的Readme.md中已经有详细的使用教程，我们只需要一步一步走下去就行。**(接下来的全部编译步骤建议在全局科学上网下进行，不然容易出现TIMEOUT)**
 
 在开始编译之前，需要创建一个非root用户。在Ubuntu的桌面环境下创建新用户非常简单，根据图示操作即可。
 
-![](./assets/openwrt/2.png)
+![](./assets/Raspi-Openwrt-Build/2.png)
 
-![](./assets/openwrt/3.png)
+![](./assets/Raspi-Openwrt-Build/3.png)
 
 创建好用户后，点击上二图注销按钮，切换到你创建的用户，再进行下面的操作。
 
 `sudo apt-get update`
 
-![](./assets/openwrt/4.png)
+![](./assets/Raspi-Openwrt-Build/4.png)
 
 接下来安装编译过程中需要的各种依赖包
 `sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget curl swig rsync`
 
 安装完建议再执行一次命令，显示如下图所示则安装成功。
 
-![](./assets/openwrt/5.png)
+![](./assets/Raspi-Openwrt-Build/5.png)
 
 然后使用`git clone https://github.com/coolsnowwolf/lede`命令下载好源代码，然后`cd lede` 进入目录。
 
-![](./assets/openwrt/6.png)
+![](./assets/Raspi-Openwrt-Build/6.png)
 
 在lede文件夹下，执行`./scripts/feeds update -a && ./scripts/feeds install -a`
 
-![](./assets/openwrt/7.png)
+![](./assets/Raspi-Openwrt-Build/7.png)
 
 上述操作执行完毕后，输入`make menuconfig`即可进入配置界面。
 
-![](./assets/openwrt/8.png)
+![](./assets/Raspi-Openwrt-Build/8.png)
 
 在配置界面中，上下方向键可以移动光标，左右方向键可以移动底部栏光标。回车进入所选内容，两次ESC返回上一级。
 
 这次我们选择用树莓派3B来做软路由，所以前三项我们选择如下：
 
-![](./assets/openwrt/9.png)
+![](./assets/Raspi-Openwrt-Build/9.png)
 
 如果是树莓派4B，则将第二项的芯片修改为BCM2711即可。
 
 然后进入Target Images，在这里修改固件分区大小。太小了会导致在编译过程中出现错误，修改为下图大小即可。
 
-![](./assets/openwrt/10.png)
+![](./assets/Raspi-Openwrt-Build/10.png)
 
 回到主菜单，进入Kernel modules -> USB Support，在这里我们添加**USB设备驱动支持**（大容量存储（即U盘）、USB网卡等等）。建议全部选择（注意要变成星号才是要编译进固件，按S可以快捷选中），**但是不要勾选kmod-usb-serial这一项，这个驱动的源码好像有问题，勾选了之后编译会不通过。**
 
-![](./assets/openwrt/11.png)
+![](./assets/Raspi-Openwrt-Build/11.png)
 
-![](./assets/openwrt/12.png)
+![](./assets/Raspi-Openwrt-Build/12.png)
 
 现在我们对OpenWrt固件的基本配置已经完成，接下来就可以去选择要安装的各种插件。但是在这之前，建议大家先进行一次**单线程编译**，看看有没有报错。没有报错编译完成后再重新进入配置界面选择需要的插件，然后再开启**多线程编译**，速度会快很多。
 
@@ -86,14 +86,14 @@ title: 树莓派3B/4B编译安装OpenWrt软路由
 
 然后执行`make -j1 V=s`进行单线程编译。
 
-![](./assets/openwrt/13.png)
+![](./assets/Raspi-Openwrt-Build/13.png)
 
 这个过程要执行两三个小时，编译完成后，在`/lede/bin/targets`路径下会有编译好的四个固件。关于这四个固件的区别可以参考<a href="https://mlapp.cn/1004.html" target="_blank" rel="noopener">这篇文章</a>。
 
 
 接下来我们再通过终端进入lede的根目录`cd lede`然后`make menuconfig`，配置插件。我们可以看到已经内置了许多的插件供我们选择：
 
-![](./assets/openwrt/14.png)
+![](./assets/Raspi-Openwrt-Build/14.png)
 
 如果列表里没有想要选择的插件，可以将插件下载到`lede/package`中再打开配置界面选择。接下来推荐几个比较实用的一些插件：
 ```cpp
@@ -130,7 +130,7 @@ git clone https://github.com/destan19/OpenAppFilter
 
 选择好插件之后，我们在**LuCI -> Themes**看一下OpenWrt管理界面的主题，自带4个，建议全选慢慢挑。
 
-![](./assets/openwrt/15.png)
+![](./assets/Raspi-Openwrt-Build/15.png)
 
 配置界面的东西实在是太多了，其他的选项大家可以自己慢慢研究，根据自己的需求编译一个属于自己的OpenWrt固件。
 
@@ -145,11 +145,11 @@ git clone https://github.com/destan19/OpenAppFilter
 自己编译固件的过程确实很乏味，操作难度也挺高，对Linux和科学上网不太了解的人进行实操可能会消耗很多时间，所以大家可以下载别人编译好的固件，直接刷入即可。这里推荐SuLingGG编译好的固件。
 先说大神编译的固件：打开<a href="https://github.com/SuLingGG/OpenWrt-Rpi" target="_blank" rel="noopener">SuLingGG的OpenWrt-Rpi仓库</a>，找到设备支持情况这一栏，点击你要安装OpenWrt固件的设备那一栏的**下载页**选项。
 
-![](./assets/openwrt/16.png)
+![](./assets/Raspi-Openwrt-Build/16.png)
 
 这些都是编译好的固件供大家下载，这些固件的区别可以看<a href="https://mlapp.cn/1004.html" target="_blank" rel="noopener">这篇文章</a>的**文件格式区别**一栏。一般选择ext4-factory那一个。点击文件名即可下载。
 
-![](./assets/openwrt/17.png)
+![](./assets/Raspi-Openwrt-Build/17.png)
 
 <div id="2"></div>
 
@@ -157,40 +157,40 @@ git clone https://github.com/destan19/OpenAppFilter
 这部分内容和树莓派刷入其他系统的操作是完全一致的。
 将下载好的固件解压，得到IMG格式的文件。然后将SD卡进行格式化，格式化工具用 **DiskGenius** 或者 **SD Card Formatter** 都可以（也许系统自带的格式化也能用但是我没试过）。格式化后使用 **Win32DiskImager** 刷入固件。将烧录好的SD卡插到树莓派上，通电开机。
 
-![](./assets/openwrt/18.png)
+![](./assets/Raspi-Openwrt-Build/18.png)
 
 <div id="3"></div>
 
 ### 网络配置
 在树莓派绿灯频繁闪烁完毕后，用网线将树莓派和电脑连接起来，如果提示有网络接入即系统启动成功。在这之前最好断开其他所有的网络连接防止后台IP冲突。
 
-![](./assets/openwrt/19.png)
+![](./assets/Raspi-Openwrt-Build/19.png)
 
 在浏览器中输入`192.168.1.1`进入路由器后台，默认用户名是`root`，密码是`password`。
 
-![](./assets/openwrt/20.png)
+![](./assets/Raspi-Openwrt-Build/20.png)
 <center>路由器概况</center>
 
 接下来点击网络 -> 接口 -> 添加新接口。**图片会和新安装的有出入是因为我这个是配置好的，大家只要按照图中标识进行操作即可。**
 
-![](./assets/openwrt/21.png)
+![](./assets/Raspi-Openwrt-Build/21.png)
 
 新接口名称我们写 **wan** ，接口协议选择 **DHCP客户端**
 
-![](./assets/openwrt/22.png)
+![](./assets/Raspi-Openwrt-Build/22.png)
 
 点击提交后，选择**防火墙设置**，配置为 **wan 区域**，点击**保存（注意不是保存&应用！）**
-![](./assets/openwrt/23.png)
+![](./assets/Raspi-Openwrt-Build/23.png)
 
 然后我们设置无线网络。点击网络 -> 无线 -> 修改。
 
-![](./assets/openwrt/24.png)
+![](./assets/Raspi-Openwrt-Build/24.png)
 
 **注意设备配置界面，如果你不熟悉不建议更改。**
 
-![](./assets/openwrt/25.png)
+![](./assets/Raspi-Openwrt-Build/25.png)
 
-![](./assets/openwrt/26.png)
+![](./assets/Raspi-Openwrt-Build/26.png)
 
 最后点击右下角的保存&应用，把之前你接在路由器WAN口上的线接到树莓派上，按照你刚刚设置的wifi名字和密码连接wifi就可以上网冲浪了。
 
@@ -207,7 +207,7 @@ git clone https://github.com/destan19/OpenAppFilter
 
 使用USB - 以太网转换器。可以参考<a href="https://mlapp.cn/1009.html" target="_blank" rel="noopener">这篇文章</a>。然后进入OpenWrt管理界面，点击网络 -> 接口 -> 修改LAN接口 -> 物理设置。新接入的网卡应该是eth1，不确定的可以在接入转换器后到状态 -> 内核日志最下方查看。
 
-![](./assets/openwrt/27.png)
+![](./assets/Raspi-Openwrt-Build/27.png)
 
 这里物理配置的意思就是把LAN接口应用到对应的接口上。比如说我勾选了无线网络使用LAN接口，无线网络的数据就通过LAN口收发；同理如果是勾选了eth1接口，那么我的USB网卡转换器就相当于接到了LAN口上，通过LAN口收发数据。
 
