@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/stars.png',
   organizationName: 'zxytql', // Usually your GitHub org/user name.
   projectName: 'zxytql.github.io', // Usually your repo name.
   trailingSlash: false,
@@ -42,15 +42,15 @@ const config = {
         title: 'ZXY SUPER COOL!',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/robot2.png',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: '文档',
-          },
+          // {
+          //   type: 'doc',
+          //   docId: 'intro',
+          //   position: 'left',
+          //   label: '文档',
+          // },
 //          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/zxytql',
@@ -58,40 +58,41 @@ const config = {
             position: 'right',
           },
         ],
+        hideOnScroll: true,
       },
       footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
+        style: 'light',
+        // links: [
+        //   {
+        //     title: 'Docs',
+        //   },
+        //   {
+        //     title: 'Community',
+        //     items: [
+        //       {
+        //         label: 'Stack Overflow',
+        //         href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+        //       },
+        //       {
+        //         label: 'Discord',
+        //         href: 'https://discordapp.com/invite/docusaurus',
+        //       },
+        //       {
+        //         label: 'Twitter',
+        //         href: 'https://twitter.com/docusaurus',
+        //       },
+        //     ],
+        //   },
+        //   {
+        //     title: 'More',
+        //     items: [
+        //       {
+        //         label: 'GitHub',
+        //         href: 'https://github.com/facebook/docusaurus',
+        //       },
+        //     ],
+        //   },
+        // ],
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
