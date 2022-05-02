@@ -43,8 +43,5 @@
 	display: none;
 }
 
-/* Smoothly Jump */
-html {
-		scroll-behavior: smooth;
-	}
+
 
