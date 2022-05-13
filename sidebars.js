@@ -20,7 +20,7 @@ const sidebars = {
   	{
   	  type: 'category',
   	  label: '树莓派开发 - Raspi',
-  	  items: ['Raspi-Openwrt-Build'],
+  	  items: ['Raspi-Openwrt-Build','Raspi-Ubuntu'],
   	},
     {
       type: 'category',
