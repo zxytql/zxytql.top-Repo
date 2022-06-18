@@ -30,7 +30,7 @@ const sidebars = {
     {
       type: 'category',
       label: '成为帅气攻城狮',
-      items: ['CLion-STM32-Development','coding'],
+      items: ['CLion-STM32-Development','coding','STMStudio'],
     },
     {
       type: 'category',
