@@ -22,6 +22,11 @@ const sidebars = {
       label: '嵌入式开发 - STM32',
       items: ['STM32-Encoder'],
     },
+    {
+      type: 'category',
+      label: '嵌入式开发 - 硬件',
+      items: ['xxxxx'],
+    },
   	{
   	  type: 'category',
   	  label: '树莓派开发 - Raspi',
