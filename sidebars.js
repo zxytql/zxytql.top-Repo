@@ -25,7 +25,7 @@ const sidebars = {
     {
       type: 'category',
       label: '嵌入式开发 - 硬件',
-      items: ['xxxxx'],
+      items: ['Hardware-GasCtrl'],
     },
   	{
   	  type: 'category',
