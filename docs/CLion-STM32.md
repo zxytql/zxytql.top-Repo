@@ -235,7 +235,7 @@ CLion是基于CMake来管理项目的，所以我们需要配置好预设的MinG
 # transport select swd
 
 # 选择STlink作为下载器
-source [find interface/stlink-v2.cfg]
+source [find interface/stlink.cfg]
 transport select hla_swd
 
 #选择开发板型号为stm32f4x
@@ -283,7 +283,40 @@ CLion是支持全功能的单步断点调试的，但是注意是单步，意味
 
 
 
-### 一些说明
+### 修改文件新建模板
+
+> 此部分参考：https://blog.csdn.net/qq_44656481/article/details/128351061
+
+在CLion中新建文件时会自动生成文件注释头，但是很丑，可以按照如下步骤更换为更加优雅美观的文件注释头。
+
+设置 -> 编辑器 -> 文件和代码模板 -> C File Header
+
+![update_1226_2](./assets/CLion-STM32/update_1226_2.png)
+
+修改内容如下：
+
+```
+#if ($HEADER_COMMENTS)
+/**
+  ******************************************************************************
+  * @file           : ${FILE_NAME}
+  * @author         : ${USER}
+  * @brief          : None
+  * @attention      : None
+  * @date           : ${DATE}
+  ******************************************************************************
+  */
+#if ($ORGANIZATION_NAME && $ORGANIZATION_NAME != "")
+// Copyright (c) $YEAR ${ORGANIZATION_NAME}#if (!$ORGANIZATION_NAME.endsWith(".")).#end All rights reserved.
+#end
+
+#end
+
+```
+
+这里仅对.c和.h文件做修改，其他语言的程序也可通过类似的方法进行修改。
+
+### 一些补充说明
 
 CLion中编译是基于`CMakeLists.txt`文件的，编译出现问题不仅可能是代码有错误，也有可能是CMakeLists中出现了问题。
 
@@ -324,4 +357,12 @@ add_link_options(-mfloat-abi=hard -mfpu=fpv4-sp-d16)
    file(GLOB_RECURSE SOURCES "startup/*.*" "Middlewares/*.*" "Drivers/*.*" "Core/*.*" "BSP/*.*" "FreeRTOS-Task/*.*")					
    ```
 
-   
+
+3. 在使用Debug功能时没有配置Embedded GDB服务器，也成功进入了调试界面，原因未知。
+
+4. 在新增文件时，请**取消勾选**“添加到目标”的选项，否则Cmake编译时会**报错找不到该文件**
+
+![update_1226_1](./assets/CLion-STM32/update_1226_1.png)
+
+[^上次更新日期]: 2023/12/26
+

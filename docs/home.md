@@ -6,15 +6,15 @@ title: 主页
 
 # Home
 
-欢迎来到我的个人站~
+你好，泥猴，欢迎来到我的个人站👋~
 
-做这个网站的本意，一开始是跟风一个实验室非常优秀的学长，想学习他记录所作的项目和学习经历的方法。后面做好了发现，自己目前阶段还是苦于学业以及保研，就算有些时候确实是做了点东西，也有点心得，但是想到要更新个人站，就得写一个Markdown，还要准备各种配图，实在是有点麻烦，自然也没什么精力去做了。
+做这个网站的本意，一开始是跟风一个实验室非常优秀的学长，想学习他记录所作的项目和学习经历的方法。后面做好了发现，就算有些时候确实是做了点东西，也有点心得，但是想到要更新个人站，就得写一个Markdown，还要准备各种配图，实在是有点麻烦，自然也没什么精力去做了。
 
 虽然网站没有更新，但是我致力于成为全栈工程师的脚步没有停下。
 
 格物致知，与君共勉。
 
-
+现已作为HBUT2020级机械专业第一推免至华南理工大学。
 
 <br/>
 
@@ -22,14 +22,11 @@ title: 主页
     <summary>个人简介</summary>
     <div>
         ▹ 	擅长STM32嵌入式开发，有在该平台下进行电机闭环控制、底盘运动、路径规划、路径跟踪的经验；会使用STM32的通讯协议（CAN、UART、SPI）与其他设备进行通讯；会使用FreeRTOS嵌入式操作系统，知道FreeRTOS的内部运行机制<br/>
-        ▹ 	熟悉Linux系统的基本操作，有在Linux系统下使用ROS、rviz的经验<br/>
+        ▹ 	熟悉Ubuntu的基本操作，有在Ubuntu下使用ROS、rviz的经验<br/>
         ▹ 	有在Windows/Linux下进行跨平台GUI库QT的开发经验<br/>
         ▹  	会使用AD、立创EDA进行硬件设计
     </div>
 </details>
-
-<br/>
-
 <details>
     <summary>获奖经历</summary>
     <div>
@@ -47,15 +44,11 @@ title: 主页
         ▹	全国大学生工程训练大赛 湖北赛区 二等奖；
     </div>
 </details>
-
-
-
-
-
-
-
 <br/>
 
-#### 联系方式：
+#### Contact me via [email](mailto:iszhouxy@gmail.com) or follow me on [Github](https://github.com/zxytql)
 
-📫 Email：iszhouxy@gmail.com 
+###### Xingyu Chou | 2023 | Deploy with [Neilify](https:www.netlify.com/) | Build with [Docusaurus](https://www.docusaurus.cn/docs)
+
+
+

@@ -38,6 +38,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      announcementBar: {
+        
+        id: 'support_us',
+        content:
+          '这是告示条, 你可以在这里看到一些notice.',
+        backgroundColor: '#f5f5f5',
+        textColor: '#091E42',
+        isCloseable: true,
+      },
       navbar: {
         title: 'ZXY SUPER COOL!',
         logo: {
