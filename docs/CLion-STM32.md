@@ -364,5 +364,9 @@ add_link_options(-mfloat-abi=hard -mfpu=fpv4-sp-d16)
 
 ![update_1226_1](./assets/CLion-STM32/update_1226_1.png)
 
-[^上次更新日期]: 2023/12/26
+<br/>
+
+<br/>
+
+<p align="right"><i> <font color = "brown">Last update on</font>: 2023/12/26 </i></p>
 

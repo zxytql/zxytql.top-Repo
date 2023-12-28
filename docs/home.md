@@ -14,7 +14,7 @@ title: 主页
 
 格物致知，与君共勉。
 
-现已作为HBUT2020级机械专业第一推免至华南理工大学。
+现推免至华南理工大学。
 
 <br/>
 
@@ -50,5 +50,9 @@ title: 主页
 
 ###### Xingyu Chou | 2023 | Deploy with [Neilify](https:www.netlify.com/) | Build with [Docusaurus](https://www.docusaurus.cn/docs)
 
+<br/>
 
+<br/>
+
+<p align="right"><i> <font color = "brown">Last update on</font>: 2023/12/28 </i></p>
 

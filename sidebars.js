@@ -40,7 +40,7 @@ const sidebars = {
     {
       type: 'category',
       label: '成为帅气攻城狮',
-      items: ['CLion-STM32-Development','coding','STMStudio'],
+      items: ['CLion-STM32-Development','coding','STMStudio','clash-for-linux'],
     },
     {
       type: 'category',
