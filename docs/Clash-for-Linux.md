@@ -5,7 +5,7 @@ title: 在Linux中使用Clash
 
 ### Clash 下载
 
-原作者@[Dreamacro](https://github.com/Dreamacro)已出于部分原因删库，这里提供删库时的最新版本供大家下载，**请注意架构。**
+原作者@[Dreamacro](https://github.com/Dreamacro)已出于部分原因删库，[这里](https://github.com/zxytql/clash-for-linux)提供删库时的最新版本供大家下载，**请注意架构。**
 
 尊重开源。勿做二次售卖。
 
@@ -116,6 +116,8 @@ sudo systemctl status clash
 如下图所示显示`active (running)`则为正常运行中：
 
 ![systemctl_status](./assets/Clash-for-Linux/systemctl_status.png)
+
+如有帮助，欢迎follow我的github或者给本仓库一个star⭐ :)
 
 <br/>
 
