@@ -1,8 +1,10 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const themes = require('prism-react-renderer').themes;
+const lightCodeTheme = themes.github;
+const darkCodeTheme = themes.dracula;
+const announcementBarContent = '🌟新文章 <a href = "/clash-for-linux"> 在Linux中使用Clash </a>上线啦, 快来看看吧~ 🌟'
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -40,11 +42,11 @@ const config = {
     ({
       announcementBar: {
         
-        id: 'support_us',
+        id: 'feature_release',
         content:
-          '这是告示条, 你可以在这里看到一些notice.',
-        backgroundColor: '#f5f5f5',
-        textColor: '#091E42',
+          announcementBarContent,
+        backgroundColor: "#fafbfc", // Defaults to `#fff`.
+        textColor: "#091E42", // Defaults to `#000`.
         isCloseable: true,
       },
       navbar: {
