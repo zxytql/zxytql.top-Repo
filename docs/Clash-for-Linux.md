@@ -123,5 +123,5 @@ sudo systemctl status clash
 
 <br/>
 
-<p align="right"><i> <font color = "brown">Last update on</font>: 2023/12/28 </i></p>
+<p align="right"><i> <font size="3"><font color = "brown">Last update on</font>: 2023/12/28 </font></i></p>
 

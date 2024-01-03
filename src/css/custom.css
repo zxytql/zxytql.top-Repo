@@ -3,7 +3,7 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-
+ /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); */
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #04549f;
@@ -25,6 +25,8 @@
   --ifm-color-primary-light: #efc66e;
   --ifm-color-primary-lighter: #f1cc7c;
   --ifm-color-primary-lightest: #f5dda7;
+  --ifm-background-color: #121212;
+  --ifm-background-surface-color: #1e2125;
 }
 
 .docusaurus-highlight-code-line {
@@ -38,10 +40,6 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* Set Scrollbar invisable */
-::-webkit-scrollbar {
-	display: none;
-}
 
 /* Smooth Scroll 顺滑跳转到某位置 */
 html {
@@ -62,4 +60,25 @@ html {
 	height: 100%;
 	left: 0;
 	top: 0;
+}
+
+@media screen and (max-width: 996px) {
+  :root {
+    --ifm-font-size-base: 17px;
+  }
+  article header h1 {
+    font-size: 1.5rem !important;
+  }
+  .hero .hero__title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 997px) {
+  :root {
+    --ifm-font-size-base: 17px;
+  }
+  article header h1 {
+    font-size: 2.5rem !important;
+  }
 }

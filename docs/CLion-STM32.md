@@ -368,5 +368,5 @@ add_link_options(-mfloat-abi=hard -mfpu=fpv4-sp-d16)
 
 <br/>
 
-<p align="right"><i> <font color = "brown">Last update on</font>: 2023/12/26 </i></p>
+<p align="right"><i> <font size="3"><font color = "brown">Last update on</font>: 2023/12/26 </font></i></p>
 

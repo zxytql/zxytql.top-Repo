@@ -12,9 +12,11 @@ title: 主页
 
 虽然网站没有更新，但是我致力于成为全栈工程师的脚步没有停下。
 
+现已推免至华南理工大学。
+
 格物致知，与君共勉。
 
-现推免至华南理工大学。
+
 
 <br/>
 
@@ -46,13 +48,12 @@ title: 主页
 </details>
 <br/>
 
-#### Contact me via [email](mailto:iszhouxy@gmail.com) or follow me on [Github](https://github.com/zxytql)
+#### Contact me via [email](mailto:iszhouxy@gmail.com).
 
-###### Xingyu Chou | 2023 | Deploy with [Neilify](https:www.netlify.com/) | Build with [Docusaurus](https://www.docusaurus.cn/docs)
-
-<br/>
 
 <br/>
 
-<p align="right"><i> <font color = "brown">Last update on</font>: 2023/12/28 </i></p>
+<br/>
+
+<p align="right"><i> <font size="3"><font color = "brown">Last update on</font>: 2024/01/03 </font></i></p>
 

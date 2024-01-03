@@ -1,10 +1,10 @@
-// @ts-check
+// @ts-nocheck
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const themes = require('prism-react-renderer').themes;
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
-const announcementBarContent = '🌟新文章 <a href = "/clash-for-linux"> 在Linux中使用Clash </a>上线啦, 快来看看吧~ 🌟'
+const announcementBarContent = '<a href = "/clash-for-linux">🌟<b>新文章《在Linux中使用Clash》已上线 </a></b>🌟'
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -16,11 +16,11 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/stars.png',
   organizationName: 'zxytql', // Usually your GitHub org/user name.
-  projectName: 'zxytql.github.io', // Usually your repo name.
+  projectName: 'zxytql.top-Repo', // Usually your repo name.
   trailingSlash: false,
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -41,7 +41,6 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       announcementBar: {
-        
         id: 'feature_release',
         content:
           announcementBarContent,
@@ -104,7 +103,7 @@ const config = {
         //     ],
         //   },
         // ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Xingyu Zhou. ⭐Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
