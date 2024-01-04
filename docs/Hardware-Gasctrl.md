@@ -24,7 +24,7 @@ title: 24V六路气阀控制板 GasCtrl
 
 #### MOS管的开通/关断原理
 
-> 该部分图片及部分正文内容来自 http://www.kiaic.com/article/detail/3247.html，感谢作者
+> 该部分图片及部分正文内容来自 [NMOS和PMOS应用电路设计图文分享](http://www.kiaic.com/article/detail/3247.html)，感谢作者
 
 ![MOS_Current_Direction](./assets/Hardware-Gasctrl/MOS_Current_Direction.png)
 
