@@ -26,7 +26,23 @@ sudo chmod +x clash
 
 Clash 在运行时需要两个文件，一个是`Country.mmdb`，另外一个是由网络服务商（机场）提供的`config.yaml`。 
 
-#### Country.mmdb
+- #### config.yaml
+
+
+**该文件由网络服务商（机场）提供**，包含了订阅链接、节点信息、代理分组等等内容。一般是提供一个链接让你下载。
+
+![new1](./assets/Clash-for-Linux/new1.jpg)
+
+如上图所示，用里面那串`https://xxxxx`替换掉下面命令的`$YOUR_LINK`，用wget下载Clash配置文件：
+
+```shell
+wget -O config.yaml "$YOUR_LINK"
+```
+
+该文件同样保存与Clash同一目录下，方便我们后续编写开机自启动程序。
+
+- #### Country.mmdb
+
 
 Country.mmdb会在第一次运行Clash时自动下载：
 
@@ -37,16 +53,6 @@ Country.mmdb会在第一次运行Clash时自动下载：
 如果下载失败，可以访问该[链接](https://github.com/Dreamacro/maxmind-geoip/releases)手动下载，并放置到与Clash同一目录下。
 
 > `Country.mmdb` 文件利用 GeoIP2 服务能识别互联网用户的地点位置，以供规则分流时使用。
-
-#### config.yaml
-
-该文件由网络服务商提供，包含了订阅链接、节点信息、代理分组等等内容。一般是提供一个链接让你下载。得到这个链接后，用wget下载Clash配置文件
-
-```shell
-wget -O config.yaml "$YOUR_LINK"
-```
-
-该文件同样保存与Clash同一目录下，方便我们后续编写开机自启动程序。
 
 ### 运行Clash
 
@@ -61,6 +67,8 @@ wget -O config.yaml "$YOUR_LINK"
 ![httpandhttps](./assets/Clash-for-Linux/httpandhttps.png)
 
 在浏览器中访问[Clash Dashboard](https://clash.razord.top/)可以进行切换节点、测延时等操作。
+
+如果你不想每次都用这种方式启动Clash，请按下`Ctrl + c`，继续往下走。
 
 ### 配置Clash 为 daemon
 
@@ -123,5 +131,5 @@ sudo systemctl status clash
 
 <br/>
 
-<p align="right"><i> <font size="3"><font color = "brown">Last update on</font>: 2023/12/28 </font></i></p>
+<p align="right"><i> <font size="3"><font color = "brown">Last update on</font>: 2024/01/08 </font></i></p>
 
