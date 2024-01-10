@@ -4,56 +4,41 @@ id: intro
 title: 主页
 ---
 
-# Home
+# Hi, zxytql there👋
 
-你好，泥猴，欢迎来到我的个人站👋~
+你好，泥猴，欢迎来到我的个人站，请随意浏览~
 
-做这个网站的本意，一开始是跟风一个实验室非常优秀的学长，想学习他记录所作的项目和学习经历的方法。后面做好了发现，就算有些时候确实是做了点东西，也有点心得，但是想到要更新个人站，就得写一个Markdown，还要准备各种配图，实在是有点麻烦，自然也没什么精力去做了。
 
-虽然网站没有更新，但是我致力于成为全栈工程师的脚步没有停下。
+<img align="right" width="50%" src="https://github-readme-stats.vercel.app/api?username=zxytql&show_icons=true&rank_icon=github&theme=swift&count_private=true&hide=prs" />
 
-现已推免至华南理工大学。
+
+- 👾 机器人攻城狮
+- 🛠️ C/C++语言开发，一点点Python
+- 🔬 擅长嵌入式软件开发，尤其是STM32
+- 🔭 正在开发轮足机器人的控制算法
+- 🌱 为了一个比赛正在学习SLAM...
+- 🤔 希望有轮足算法开发/ROS大佬带带我😭
+- ⚡ 一个 ROBOCONer
+
+<br/>
+<div align="center"> 
+  <img src="https://vbr.wocr.tk/badge?page_id=zxytql&lcolor=fff&color=000&style=for-the-badge&logo=Github&logoColor=181717&hit=false&text=Github" /> 
+  <img src="https://vbr.wocr.tk/badge?page_id=zxytql.top&lcolor=fff&color=000&style=for-the-badge&logo=apache spark&logoColor=E25A1C&text=zxytql.top" /> 
+  <br/>
+</div>
+<br/>
+
+做这个网站的本意，一开始是跟风一个实验室非常优秀的学长，想学习他记录所作的项目和学习经历的方法。后面做好了发现，就算有些时候确实是做了点东西，也有点心得，但是想到要更新个人站，就得写一个Markdown，还要准备各种配图，实在是有点麻烦。
+
+
+不过随着时间推移，回看自己前些年写的博客，还是有很多感慨的。希望这个网站能成为我个人简历的一部分。
+
 
 格物致知，与君共勉。
 
 
-
-<br/>
-
-<details>
-    <summary>个人简介</summary>
-    <div>
-        ▹ 	擅长STM32嵌入式开发，有在该平台下进行电机闭环控制、底盘运动、路径规划、路径跟踪的经验；会使用STM32的通讯协议（CAN、UART、SPI）与其他设备进行通讯；会使用FreeRTOS嵌入式操作系统，知道FreeRTOS的内部运行机制<br/>
-        ▹ 	熟悉Ubuntu的基本操作，有在Ubuntu下使用ROS、rviz的经验<br/>
-        ▹ 	有在Windows/Linux下进行跨平台GUI库QT的开发经验<br/>
-        ▹  	会使用AD、立创EDA进行硬件设计
-    </div>
-</details>
-<details>
-    <summary>获奖经历</summary>
-    <div>
-        ▹	全国大学生机器人大赛2023ROBOCON机器马术竞速赛 国家一等奖；<br/>
-        ▹	全国大学生机器人大赛2023ROBOCON机器马术障碍赛 国家二等奖；<br/>
-        ▹	全国大学生机器人大赛2023ROBOCON吴哥之花 国家二等奖<br/>
-        ▹	全国大学生机器人大赛2021ROBOCON机器马术赛 国家二等奖；<br/>
-        ▹	全国大学生机器人大赛2021ROBOCON投壶行殇 国家二等奖；<br/>
-        ▹	全国大学生机器人大赛2022ROBOCON队长 同创辉煌 国家二等奖；<br/>
-        ▹	全国大学生机器人大赛2022ROBOCON队长 机器马术赛 国家二等奖；<br/>
-        ▹	全国大学生机器人大赛RoboMaster大赛 Sim2Real仿真赛 优秀奖；<br/>
-        ▹	中国机器人大赛武术擂台赛 国家三等奖；<br/>
-        ▹	全国大学生机械创新设计大赛 队长 湖北赛区 二等奖；<br/>
-        ▹	中国高校智能机器人创意大赛 队长 湖北赛区 一等奖；<br/>
-        ▹	全国大学生工程训练大赛 湖北赛区 二等奖；
-    </div>
-</details>
-<br/>
-
 #### Contact me via [email](mailto:iszhouxy@gmail.com).
 
+<p align="right"><i> <font size="3"><font color = "brown">Last update on</font>: 2024/01/10 </font></i></p>
 
-<br/>
-
-<br/>
-
-<p align="right"><i> <font size="3"><font color = "brown">Last update on</font>: 2024/01/03 </font></i></p>
 

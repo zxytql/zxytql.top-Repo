@@ -45,7 +45,7 @@ const sidebars = {
     {
       type: 'category',
       label: '秘密基地',
-      items: ['myLove'],
+      items: ['award-exp','myLove'],
     },
   	],
   // But you can create a sidebar manually
