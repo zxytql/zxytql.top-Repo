@@ -8,9 +8,9 @@ title: 主页
 
 你好，泥猴，欢迎来到我的个人站，请随意浏览~
 
-
-<img align="right" width="50%" src="https://github-readme-stats.vercel.app/api?username=zxytql&show_icons=true&rank_icon=github&theme=swift&count_private=true&hide=prs" />
-
+<a href = "https://github.com/zxytql">
+    <img align="right" width="50%" src="https://github-readme-stats.vercel.app/api?username=zxytql&show_icons=true&rank_icon=github&theme=swift&count_private=true&hide=prs" />
+</a>
 
 - 👾 机器人攻城狮
 - 🛠️ C/C++语言开发，一点点Python
