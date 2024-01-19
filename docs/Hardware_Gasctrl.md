@@ -1,5 +1,5 @@
 ---
-id: Hardware-GasCtrl
+id: ESD_Hardware_GasCtrl
 title: 24V六路气阀控制板 GasCtrl
 ---
 

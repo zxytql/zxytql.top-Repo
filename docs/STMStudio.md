@@ -1,5 +1,5 @@
 ---
-id: STMStudio
+id: ESD_STMStudio
 title: 用STM Studio进行实时调试并实现数据可视化
 ---
 

@@ -1,5 +1,5 @@
 ---
-id: award-exp
+id: Base_Award_Exp
 title: 获奖经历
 ---
 

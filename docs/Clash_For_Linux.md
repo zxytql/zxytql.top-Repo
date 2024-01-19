@@ -1,5 +1,5 @@
 ---
-id: clash-for-linux
+id: DEV_Clash_For_Linux
 title: 在Linux中使用Clash
 ---
 

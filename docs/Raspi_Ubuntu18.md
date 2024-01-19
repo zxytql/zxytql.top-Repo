@@ -1,5 +1,5 @@
 ---
-id: Raspi-Ubuntu
+id: Raspi_Ubuntu18
 title: 树莓派4B安装Ubuntu18.04 + vnc远程桌面
 ---
 

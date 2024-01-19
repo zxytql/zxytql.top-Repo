@@ -1,5 +1,5 @@
 ---
-id: CLion-STM32-Development
+id: DEV_CLion_STM32_Development
 title: 用新时代C/C++开发工具CLion进行STM32开发
 ---
 

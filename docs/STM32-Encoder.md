@@ -1,5 +1,5 @@
 ---
-id: STM32-Encoder
+id: ESD_STM32_Encoder
 title: STM32定时器 编码器模式
 ---
 

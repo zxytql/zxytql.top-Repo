@@ -1,5 +1,5 @@
 ---
-id: Raspi-Openwrt-Build
+id: Raspi_Openwrt_Build
 title: 树莓派3B/4B编译安装OpenWrt软路由
 ---
 
