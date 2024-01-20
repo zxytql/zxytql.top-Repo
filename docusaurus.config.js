@@ -9,7 +9,7 @@ const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 // const themes = require('prism-react-renderer').themes;
 // const lightCodeTheme = themes.github;
 // const darkCodeTheme = themes.dracula;
-const announcementBarContent = '<a href = "/clash-for-linux">🌟<b>新文章《在Linux中使用Clash》已上线 </a></b>🌟'
+const announcementBarContent = '<a href = "/KA_Steering_Wheel">🌟<b>新文章《舵轮运动学分析》已上线 </a></b>🌟'
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
