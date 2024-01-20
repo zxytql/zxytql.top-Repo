@@ -57,4 +57,47 @@ export default {
 };
 ```
 
+### Error: MDX compilation failed
+> 这个问题出现有很多种情况，大部份都与html的语法相关。
+```js 
+Cause: Unexpected closing tag `</center>`, expected corresponding closing tag for `<font>` (14:10-14:33)
+Details:
+{
+  "column": 85,
+  "message": "Unexpected closing tag `</center>`, expected corresponding closing tag for `<font>` (14:10-14:33)",
+  "line": 14,
+  "name": "14:85-14:94",
+  "place": {
+    "start": {
+      "line": 14,
+      "column": 85,
+      "offset": 337,
+      "_index": 0,
+      "_bufferIndex": 84
+    },
+    "end": {
+      "line": 14,
+      "column": 94,
+      "offset": 346,
+      "_index": 0,
+      "_bufferIndex": 93
+    }
+  },
+  "reason": "Unexpected closing tag `</center>`, expected corresponding closing tag for `<font>` (14:10-14:33)",
+  "ruleId": "end-tag-mismatch",
+  "source": "mdast-util-mdx-jsx"
+}
+```
+问题代码为：
+```html
+<center> <font font-size="14px"><font color = "#c0c0c0">图1. 3WIS robot model </font></center> 
+```
+我是在Typora上写的MD文件，预览一切正常，但是编译时会抱错。分析错误代码可以发现是有一个`<font>`没有匹配上。
+修改为：
+```html
+<center> <font font-size="14px"><font color = "#c0c0c0">图1. 3WIS robot model </font></font></center> 
+```
+编译通过。
+
+---
 <p align="right"><i> <font size="3"><font color = "brown">Last update on</font>: 2024/01/21 </font></i></p>
