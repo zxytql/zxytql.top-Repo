@@ -1,9 +1,14 @@
 // @ts-nocheck
 // Note: type annotations allow type checking and IDEs autocompletion
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
-const themes = require('prism-react-renderer').themes;
-const lightCodeTheme = themes.github;
-const darkCodeTheme = themes.dracula;
+const lightCodeTheme = require('prism-react-renderer').themes.github;
+const darkCodeTheme = require('prism-react-renderer').themes.dracula;
+
+// const themes = require('prism-react-renderer').themes;
+// const lightCodeTheme = themes.github;
+// const darkCodeTheme = themes.dracula;
 const announcementBarContent = '<a href = "/clash-for-linux">🌟<b>新文章《在Linux中使用Clash》已上线 </a></b>🌟'
 
 /** @type {import('@docusaurus/types').Config} */
@@ -26,6 +31,8 @@ const config = {
         docs: {
           routeBasePath:'/',
           sidebarPath: require.resolve('./sidebars.js'),
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
           // Please change this to your repo.
           //editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
@@ -36,7 +43,15 @@ const config = {
       }),
     ],
   ],
-
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

@@ -68,6 +68,7 @@ const sidebars = {
       type: 'category',
       label: '成为帅气攻城狮',
       items: [
+        'DEV_Web_Maintenance_Guide',
         'DEV_Clash_For_Linux',
         'DEV_CLion_STM32_Development',
         'DEV_Coding'
