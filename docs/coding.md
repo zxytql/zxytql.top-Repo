@@ -5,12 +5,6 @@ title: 使用Coding进行团队代码协作
 
 
 
-> Git官网是跳转到了Github进行下载，有些时候速度堪忧，所以在这里提供软件安装包，有需要的可以自取下载。
->
-> GIT文件链接：https://www.aliyundrive.com/s/BuEbXnC25QC
-
-
-
 使用Git将代码上传到Github，可以很方便地进行代码的版本管理。但是由于大部分时间在国内访问Github的速度不太理想，而且上传的时候也经常出错。现在有部分团队使用Coding进行团队代码管理，试了一下，效果还是不错的。
 
 ### 下载安装Git
@@ -108,3 +102,29 @@ git clone https://e.coding.net/hcrt/2022robocon/Tutorial1.git
   查看本地文件夹，可以看到已经将代码下载到本地。
 
   ![](./assets/coding/coding_blog_10.png)
+
+### 配置SSH代理
+当你对github使用git操作时很慢，甚至报timeout错误，你需要配置一下SSH的代理走科学通道。
+- Windows
+```shell title="~/.ssh/config"
+# Windows 全局
+ProxyCommand "C:\Program Files\Git\mingw64\bin\connect.exe" -H 127.0.0.1:7890 %h %p
+
+# 针对某个网站 eg. github
+Host github.com
+  ProxyCommand "C:\Program Files\Git\mingw64\bin\connect.exe" -H 127.0.0.1:7890 %h %p
+```
+这里 git 的安装路径和后面的代理端口根据自己修改。我使用的是Clash，默认7890端口，走HTTP协议。-S 是 socks 代理，默认是 socks5，如果要使用 HTTP 代理，就写 -H。
+
+- Linux / MacOS
+```shell title="/($YOUR USER NAME)/.ssh/config"
+# Linux / MacOS 全局
+ProxyCommand nc -X 5 -x 127.0.0.1:7890 %h %p
+
+# 针对某个网站 eg. github
+Host *
+    ProxyCommand nc -X 5 -x 127.0.0.1:7890 %h %p
+```
+
+<br/>
+<p align="right"><i> <font size="3"><font color = "brown">Last update on</font>: 2024/01/27 </font></i></p>
