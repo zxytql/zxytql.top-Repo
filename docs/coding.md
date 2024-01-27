@@ -117,12 +117,12 @@ Host github.com
 这里 git 的安装路径和后面的代理端口根据自己修改。我使用的是Clash，默认7890端口，走HTTP协议。-S 是 socks 代理，默认是 socks5，如果要使用 HTTP 代理，就写 -H。
 
 - Linux / MacOS
-```shell title="/($YOUR USER NAME)/.ssh/config"
+```shell title="~/.ssh/config"
 # Linux / MacOS 全局
 ProxyCommand nc -X 5 -x 127.0.0.1:7890 %h %p
 
 # 针对某个网站 eg. github
-Host *
+Host github.com
     ProxyCommand nc -X 5 -x 127.0.0.1:7890 %h %p
 ```
 
