@@ -119,11 +119,12 @@ Host github.com
 - Linux / MacOS
 ```shell title="~/.ssh/config"
 # Linux / MacOS 全局
-ProxyCommand nc -X 5 -x 127.0.0.1:7890 %h %p
+ProxyCommand nc -X connect -x 127.0.0.1:7890 %h %p
 
 # 针对某个网站 eg. github
 Host github.com
-    ProxyCommand nc -X 5 -x 127.0.0.1:7890 %h %p
+    User git
+    ProxyCommand nc -X connect -x 127.0.0.1:7890 %h %p
 ```
 
 <br/>
