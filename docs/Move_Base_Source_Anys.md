@@ -607,39 +607,39 @@ bool MoveBase::getRobotPose(geometry_msgs::PoseStamped& global_pose, costmap_2d:
 ```cpp
 //In function executeCycle(...)
 
-	if(new_global_plan_){
-    //确保该判断仅会在刚得到新路径时实行
-    new_global_plan_ = false;
+    if(new_global_plan_){
+        //确保该判断仅会在刚得到新路径时实行
+        new_global_plan_ = false;
 
-    ROS_DEBUG_NAMED("move_base","Got a new plan...swap pointers");
+        ROS_DEBUG_NAMED("move_base","Got a new plan...swap pointers");
 
-    //do a pointer swap under mutex
-    std::vector<geometry_msgs::PoseStamped>* temp_plan = controller_plan_;
+        //do a pointer swap under mutex
+        std::vector<geometry_msgs::PoseStamped>* temp_plan = controller_plan_;
 
-    boost::unique_lock<boost::recursive_mutex> lock(planner_mutex_);
-    controller_plan_ = latest_plan_;
-    latest_plan_ = temp_plan;
-    lock.unlock();
-    ROS_DEBUG_NAMED("move_base","pointers swapped!");
-
-    //传递路径到控制器，tc是局部规划器的指针，setPlan是TrajectoryPlannerROS的函数
-    if(!tc_->setPlan(*controller_plan_)){ 
-        //ABORT and SHUTDOWN COSTMAPS
-        ROS_ERROR("Failed to pass global plan to the controller, aborting.");
-        resetState();
-
-        //disable the planner thread
-        lock.lock();
-        runPlanner_ = false;
+        boost::unique_lock<boost::recursive_mutex> lock(planner_mutex_);
+        controller_plan_ = latest_plan_;
+        latest_plan_ = temp_plan;
         lock.unlock();
+        ROS_DEBUG_NAMED("move_base","pointers swapped!");
 
-        as_->setAborted(move_base_msgs::MoveBaseResult(), "Failed to pass global plan to the controller.");
-        return true;
-    }
+        //传递路径到控制器，tc是局部规划器的指针，setPlan是TrajectoryPlannerROS的函数
+        if(!tc_->setPlan(*controller_plan_)){ 
+            //ABORT and SHUTDOWN COSTMAPS
+            ROS_ERROR("Failed to pass global plan to the controller, aborting.");
+            resetState();
 
-    //若此全局路径有效，则不需要恢复动作
-    if(recovery_trigger_ == PLANNING_R)
-        recovery_index_ = 0;
+            //disable the planner thread
+            lock.lock();
+            runPlanner_ = false;
+            lock.unlock();
+
+            as_->setAborted(move_base_msgs::MoveBaseResult(), "Failed to pass global plan to the controller.");
+            return true;
+        }
+
+        //若此全局路径有效，则不需要恢复动作
+        if(recovery_trigger_ == PLANNING_R)
+            recovery_index_ = 0;
     }
 ```
 
@@ -648,13 +648,12 @@ bool MoveBase::getRobotPose(geometry_msgs::PoseStamped& global_pose, costmap_2d:
 ```cpp
 //In function executeCycle(...)
 
-	switch(state_)
+    switch(state_)
     {
         case PLANNING:
         case CONTROLLING:
         case CLEARING:
         default:
-            
     }
 ```
 
@@ -665,7 +664,7 @@ bool MoveBase::getRobotPose(geometry_msgs::PoseStamped& global_pose, costmap_2d:
 ```cpp
 //In function executeCycle(...)
 
-	//1. 规划状态，则尝试获取一条全局路径
+//1. 规划状态，则尝试获取一条全局路径
     case PLANNING:
     {
         boost::recursive_mutex::scoped_lock lock(planner_mutex_);
@@ -681,7 +680,7 @@ bool MoveBase::getRobotPose(geometry_msgs::PoseStamped& global_pose, costmap_2d:
 ```cpp
 //In function executeCycle(...)
 
-	//2. 控制状态
+//2. 控制状态
     case CONTROLLING:
     ROS_DEBUG_NAMED("move_base","In controlling state.");
 
@@ -781,7 +780,7 @@ void MoveBase::resetState(){
 ```cpp
 //In function executeCycle(...)
 
-	//3. 清除障碍状态。当机器人遇到规划失败、控制失败，会进入清除障碍模式
+//3. 清除障碍状态。当机器人遇到规划失败、控制失败，会进入清除障碍模式
     case CLEARING:
         ROS_DEBUG_NAMED("move_base","In clearing/recovery state");
 
@@ -845,16 +844,16 @@ void MoveBase::resetState(){
 ```cpp
 //In function executeCycle(...)
 
-	default:
-    //默认不会进入该状态，如果进入了则说明出问题了，重置状态，结束线程
-    ROS_ERROR("This case should never be reached, something is wrong, aborting");
-    resetState();
-    //disable the planner thread
-    boost::unique_lock<boost::recursive_mutex> lock(planner_mutex_);
-    runPlanner_ = false;
-    lock.unlock();
-    as_->setAborted(move_base_msgs::MoveBaseResult(), "Reached a case that should not be hit in move_base. This is a bug, please report it.");
-    return true;
+//默认不会进入该状态，如果进入了则说明出问题了，重置状态，结束线程
+    default:
+        ROS_ERROR("This case should never be reached, something is wrong, aborting");
+        resetState();
+        //disable the planner thread
+        boost::unique_lock<boost::recursive_mutex> lock(planner_mutex_);
+        runPlanner_ = false;
+        lock.unlock();
+        as_->setAborted(move_base_msgs::MoveBaseResult(), "Reached a case that should not be hit in move_base. This is a bug, please report it.");
+        return true;
 }
 
 //we aren't done yet
@@ -1000,8 +999,8 @@ void MoveBase::planThread(){
 ```cpp title="move_base.cpp"
 void MoveBase::wakePlanner(const ros::TimerEvent& event)
 {
-// we have slept long enough for rate
-planner_cond_.notify_one();
+    // we have slept long enough for rate
+    planner_cond_.notify_one();
 }
 ```
 
@@ -1147,57 +1146,57 @@ bool MoveBase::planService(nav_msgs::GetPlan::Request &req, nav_msgs::GetPlan::R
 ```cpp
 //In function planService(...)
 
-	std::vector<geometry_msgs::PoseStamped> global_plan;
+    std::vector<geometry_msgs::PoseStamped> global_plan;
     if(!planner_->makePlan(start, req.goal, global_plan) || global_plan.empty()){
-      ROS_DEBUG_NAMED("move_base","Failed to find a plan to exact goal of (%.2f, %.2f), searching for a feasible goal within tolerance",
-          req.goal.pose.position.x, req.goal.pose.position.y);
+        ROS_DEBUG_NAMED("move_base","Failed to find a plan to exact goal of (%.2f, %.2f), searching for a feasible goal within tolerance",
+        req.goal.pose.position.x, req.goal.pose.position.y);
 
-      //在规定的公差范围内向外寻找可行的goal
-      geometry_msgs::PoseStamped p;
-      p = req.goal;
-      bool found_legal = false;
-      float resolution = planner_costmap_ros_->getCostmap()->getResolution();
-      float search_increment = resolution*3.0; //将分辨率乘以3倍，以此为增量向外寻找路径
-      if(req.tolerance > 0.0 && req.tolerance < search_increment) search_increment = req.tolerance;
-      for(float max_offset = search_increment; max_offset <= req.tolerance && !found_legal; max_offset += search_increment) {
-        for(float y_offset = 0; y_offset <= max_offset && !found_legal; y_offset += search_increment) {
-          for(float x_offset = 0; x_offset <= max_offset && !found_legal; x_offset += search_increment) {
+        //在规定的公差范围内向外寻找可行的goal
+        geometry_msgs::PoseStamped p;
+        p = req.goal;
+        bool found_legal = false;
+        float resolution = planner_costmap_ros_->getCostmap()->getResolution();
+        float search_increment = resolution*3.0; //将分辨率乘以3倍，以此为增量向外寻找路径
+        if(req.tolerance > 0.0 && req.tolerance < search_increment) search_increment = req.tolerance;
+        for(float max_offset = search_increment; max_offset <= req.tolerance && !found_legal; max_offset += search_increment) {
+            for(float y_offset = 0; y_offset <= max_offset && !found_legal; y_offset += search_increment) {
+            for(float x_offset = 0; x_offset <= max_offset && !found_legal; x_offset += search_increment) {
 
-            //不找离本位置太近的点
-            if(x_offset < max_offset-1e-9 && y_offset < max_offset-1e-9) continue;
+                //不找离本位置太近的点
+                if(x_offset < max_offset-1e-9 && y_offset < max_offset-1e-9) continue;
 
-            //从X，Y两个方向找
-            for(float y_mult = -1.0; y_mult <= 1.0 + 1e-9 && !found_legal; y_mult += 2.0) {
+                //从X，Y两个方向找
+                for(float y_mult = -1.0; y_mult <= 1.0 + 1e-9 && !found_legal; y_mult += 2.0) {
 
-              //如果偏移量过小，则抛弃
-              if(y_offset < 1e-9 && y_mult < -1.0 + 1e-9) continue;
+                //如果偏移量过小，则抛弃
+                if(y_offset < 1e-9 && y_mult < -1.0 + 1e-9) continue;
 
-              for(float x_mult = -1.0; x_mult <= 1.0 + 1e-9 && !found_legal; x_mult += 2.0) {
-                if(x_offset < 1e-9 && x_mult < -1.0 + 1e-9) continue;
+                for(float x_mult = -1.0; x_mult <= 1.0 + 1e-9 && !found_legal; x_mult += 2.0) {
+                    if(x_offset < 1e-9 && x_mult < -1.0 + 1e-9) continue;
 
-                p.pose.position.y = req.goal.pose.position.y + y_offset * y_mult;
-                p.pose.position.x = req.goal.pose.position.x + x_offset * x_mult;
+                    p.pose.position.y = req.goal.pose.position.y + y_offset * y_mult;
+                    p.pose.position.x = req.goal.pose.position.x + x_offset * x_mult;
 
-                if(planner_->makePlan(start, p, global_plan)){
-                  if(!global_plan.empty()){
+                    if(planner_->makePlan(start, p, global_plan)){
+                    if(!global_plan.empty()){
 
-                    if (make_plan_add_unreachable_goal_) {
-                      global_plan.push_back(req.goal);
+                        if (make_plan_add_unreachable_goal_) {
+                        global_plan.push_back(req.goal);
+                        }
+
+                        found_legal = true;
+                        ROS_DEBUG_NAMED("move_base", "Found a plan to point (%.2f, %.2f)", p.pose.position.x, p.pose.position.y);
+                        break;
                     }
-
-                    found_legal = true;
-                    ROS_DEBUG_NAMED("move_base", "Found a plan to point (%.2f, %.2f)", p.pose.position.x, p.pose.position.y);
-                    break;
-                  }
+                    }
+                    else{
+                    ROS_DEBUG_NAMED("move_base","Failed to find a plan to point (%.2f, %.2f)", p.pose.position.x, p.pose.position.y);
+                    }
                 }
-                else{
-                  ROS_DEBUG_NAMED("move_base","Failed to find a plan to point (%.2f, %.2f)", p.pose.position.x, p.pose.position.y);
                 }
-              }
             }
-          }
+            }
         }
-      }
     }
 ```
 
@@ -1206,7 +1205,7 @@ bool MoveBase::planService(nav_msgs::GetPlan::Request &req, nav_msgs::GetPlan::R
 ```cpp
 //In function planService(...)
 
-	resp.plan.poses.resize(global_plan.size());
+    resp.plan.poses.resize(global_plan.size());
     for(unsigned int i = 0; i < global_plan.size(); ++i){
       resp.plan.poses[i] = global_plan[i];
     }
