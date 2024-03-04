@@ -20,13 +20,12 @@ title: 主页
 - 🤔 希望有轮足算法开发/ROS大佬带带我😭
 - ⚡ 一个 ROBOCONer
 
-<!-- <br/>
 <div align="center"> 
-  <img src="https://vbr.wocr.tk/badge?page_id=zxytql&lcolor=fff&color=000&style=for-the-badge&logo=Github&logoColor=181717&hit=false&text=Github" /> 
-  <img src="https://vbr.wocr.tk/badge?page_id=zxytql.top&lcolor=fff&color=000&style=for-the-badge&logo=apache spark&logoColor=E25A1C&text=zxytql.top" /> 
+  <img src="https://vbr.nathanchung.dev/badge?page_id=zxytql&lcolor=fff&color=000&style=for-the-badge&logo=Github&logoColor=181717&hit=false&text=Github" /> 
+  <img src="https://vbr.nathanchung.dev/badge?page_id=zxytql.top&lcolor=fff&color=000&style=for-the-badge&logo=apache spark&logoColor=E25A1C&text=zxytql.top" /> 
   <br/>
 </div>
-<br/> -->
+<br/>
 
 做这个网站的本意，一开始是跟风一个实验室非常优秀的学长，想学习他记录所作的项目和学习经历的方法。后面做好了发现，就算有些时候确实是做了点东西，也有点心得，但是想到要更新个人站，就得写一个Markdown，还要准备各种配图，实在是有点麻烦。
 
@@ -39,6 +38,6 @@ title: 主页
 
 #### Contact me via [email](mailto:iszhouxy@gmail.com).
 
-<p align="right"><i> <font size="3"><font color = "brown">Last update on</font>: 2024/01/10 </font></i></p>
+<p align="right"><i> <font size="3"><font color = "brown">Last update on</font>: 2024/03/04 </font></i></p>
 
 
