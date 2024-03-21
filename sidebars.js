@@ -25,14 +25,14 @@ const sidebars = {
           type: 'category',
           label: 'STM32',
           items: [
-            'ESD_STM32_Encoder',
-            'ESD_STMStudio'
+            'ESD/STM32_Encoder',
+            'ESD/STMStudio'
           ]
         },
         {
           type: 'category',
           label: '硬件设计',
-          items: ['ESD_Hardware_GasCtrl']
+          items: ['ESD/Hardware_GasCtrl']
         }
       ]
     },
@@ -44,14 +44,14 @@ const sidebars = {
           type: "category",
           label: 'SLAM',
           items: [
-            'SLAM_Move_Base_Source_Anys',
+            'Algorithm/SLAM_Move_Base_Source_Anys',
           ]
         },
         {
           type: 'category',
           label: '运动学算法',
           items: [
-            'KA_Steering_Wheel'
+            'Algorithm/Steering_Wheel'
           ]
         }
       ]
@@ -60,18 +60,19 @@ const sidebars = {
       type: 'category',
       label: '树莓派开发',
       items: [
-        'Raspi_Openwrt_Build',
-        'Raspi_Ubuntu18'
+        'Raspi/Openwrt_Build',
+        'Raspi/Ubuntu18'
       ]
     },
     {
       type: 'category',
       label: '成为帅气攻城狮',
       items: [
-        'DEV_Web_Maintenance_Guide',
-        'DEV_Clash_For_Linux',
-        'DEV_CLion_STM32_Development',
-        'DEV_Coding'
+        'Development/Git_Config',
+        'Development/Web_Maintenance_Guide',
+        'Development/Clash_For_Linux',
+        'Development/CLion_STM32_Development',
+        'Development/Coding'
       ]
     },
     {

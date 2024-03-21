@@ -1,5 +1,5 @@
 ---
-id: DEV_Clash_For_Linux
+id: Clash_For_Linux
 title: 在Linux中使用Clash
 ---
 
@@ -31,7 +31,7 @@ Clash 在运行时需要两个文件，一个是`Country.mmdb`，另外一个是
 
 **该文件由网络服务商（机场）提供**，包含了订阅链接、节点信息、代理分组等等内容。一般是提供一个链接让你下载。
 
-![new1](./assets/Clash-for-Linux/new1.jpg)
+![new1](../assets/Clash-for-Linux/new1.jpg)
 
 如上图所示，用里面那串`https://xxxxx`替换掉下面命令的`$YOUR_LINK`，用wget下载Clash配置文件：
 
@@ -64,7 +64,7 @@ Country.mmdb会在第一次运行Clash时自动下载：
 
 并在系统代理设置中配置HTTP和HTTPS代理。
 
-![httpandhttps](./assets/Clash-for-Linux/httpandhttps.png)
+![httpandhttps](../assets/Clash-for-Linux/httpandhttps.png)
 
 在浏览器中访问[Clash Dashboard](https://clash.razord.top/)可以进行切换节点、测延时等操作。
 
@@ -123,7 +123,7 @@ sudo systemctl status clash
 
 如下图所示显示`active (running)`则为正常运行中：
 
-![systemctl_status](./assets/Clash-for-Linux/systemctl_status.png)
+![systemctl_status](../assets/Clash-for-Linux/systemctl_status.png)
 
 如有帮助，欢迎follow我的github或者给本仓库一个star⭐ :)
 

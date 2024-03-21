@@ -4,11 +4,11 @@ title: move_base源码分析
 ---
 move_base功能包是在ROS的导航中最常用的包之一。它提供了基于动作(action)的路径规划实现，可以根据给定的目标点，控制机器人底盘运动至目标位置，并且在运动过程中会连续反馈机器人自身的姿态与目标点的状态信息。move_base节点与全局规划器(Global planner)和局部规划器(Local planner)连接在一起，以完成其全局的导航任务。其运行框架如下图所示：
 
-![](./assets/Move_Base_Source_Anys/overview_tf.png)
+![](../assets/Move_Base_Source_Anys/overview_tf.png)
 
 <center> <font font-size="14px"><font color = "#c0c0c0">图1. Overview </font></font></center> 
 
-![](./assets/Move_Base_Source_Anys/recovery_behaviors.png)
+![](../assets/Move_Base_Source_Anys/recovery_behaviors.png)
 
 <center> <font font-size="14px"><font color = "#c0c0c0">图2. 恢复动作 </font></font></center> 
 

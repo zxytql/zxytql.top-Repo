@@ -1,5 +1,5 @@
 ---
-id: KA_Steering_Wheel
+id: Steering_Wheel
 title: 舵轮运动学分析
 ---
 
@@ -9,11 +9,11 @@ title: 舵轮运动学分析
 
 图1展示了一种简单的三轮舵轮底盘结构图，图2展示了三轮舵轮底盘的全局坐标系、机器人坐标系和轮系坐标系。
 
-![](./assets/Steering_Wheel_Kinematics/1.png)
+![](../assets/Steering_Wheel_Kinematics/1.png)
 
 <center> <font font-size="14px"><font color = "#c0c0c0">图1. 3WIS robot model </font></font></center> 
 
-![](./assets/Steering_Wheel_Kinematics/2.png)
+![](../assets/Steering_Wheel_Kinematics/2.png)
 
 <center> <font font-size="14px"><font color = "#c0c0c0">图2. Kinematics model of 3WIS robot in global coordinate system (black), robot coordinate system (blue), wheel coordinate system (green) </font></font></center> 
 

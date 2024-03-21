@@ -1,5 +1,5 @@
 ---
-id: DEV_Web_Maintenance_Guide
+id: Web_Maintenance_Guide
 title: Docusaurus v3.0 维护指南
 ---
 
