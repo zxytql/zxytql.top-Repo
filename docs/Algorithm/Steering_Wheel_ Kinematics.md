@@ -3,7 +3,7 @@ id: Steering_Wheel
 title: 舵轮运动学分析
 ---
 
-四轮舵轮Webots仿真开源链接：https://github.com/zxytql/Wb_Steering_Wheel
+三轮、四轮舵轮Webots仿真开源链接：[https://github.com/zxytql/Webots_Steering_Wheel](https://github.com/zxytql/Webots_Steering_Wheel)
 
 ## 三轮舵轮
 
