@@ -182,22 +182,22 @@ $$
 \begin{equation} v_{1y}= v_1\sin\delta _1 = v_{cy}+\omega \times r_x \end{equation}
 $$
 $$
-\begin{equation} v_{2x}= v_1\cos\delta _2 = v_{cx}-\omega \times r_y \end{equation}
+\begin{equation} v_{2x}= v_2\cos\delta _2 = v_{cx}-\omega \times r_y \end{equation}
 $$
 $$
-\begin{equation} v_{2y}= v_1\sin\delta _2 = v_{cy}-\omega \times r_x \end{equation}
+\begin{equation} v_{2y}= v_2\sin\delta _2 = v_{cy}-\omega \times r_x \end{equation}
 $$
 $$
-\begin{equation} v_{3x}= v_1\cos\delta _3 = v_{cx}+\omega \times r_y \end{equation}
+\begin{equation} v_{3x}= v_3\cos\delta _3 = v_{cx}+\omega \times r_y \end{equation}
 $$
 $$
-\begin{equation} v_{3y}= v_1\sin\delta _3 = v_{cy}-\omega \times r_x \end{equation}
+\begin{equation} v_{3y}= v_3\sin\delta _3 = v_{cy}-\omega \times r_x \end{equation}
 $$
 $$
-\begin{equation} v_{4x}= v_1\cos\delta _4 = v_{cx}+\omega \times r_y \end{equation}
+\begin{equation} v_{4x}= v_4\cos\delta _4 = v_{cx}+\omega \times r_y \end{equation}
 $$
 $$
-\begin{equation} v_{4y}= v_1\sin\delta _4 = v_{cy}+\omega \times r_x \end{equation}
+\begin{equation} v_{4y}= v_4\sin\delta _4 = v_{cy}+\omega \times r_x \end{equation}
 $$
 
 结合式子(15)~(22)，四轮舵轮机器人的运动学方程可以用下式表示：
@@ -297,4 +297,4 @@ v_4
 \end{array}\right] \end{equation}
 $$
 
-<p align="right"><i> <font size="3"><font color = "brown">Last update on</font>: 2024/04/30 </font></i></p>
+<p align="right"><i> <font size="3"><font color = "brown">Last update on</font>: 2024/05/15 </font></i></p>
