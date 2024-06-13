@@ -79,8 +79,7 @@ const sidebars = {
       type: 'category',
       label: '秘密基地',
       items: [
-        'Base_Award_Exp',
-        'Base_My_Love'
+        'Base_Award_Exp'
       ]
     }
   ]
