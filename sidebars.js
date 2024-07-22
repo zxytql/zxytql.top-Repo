@@ -53,7 +53,7 @@ const sidebars = {
           items: [
             'Algorithm/Steering_Wheel'
           ]
-        }
+        },
       ]
     },
     {
@@ -62,6 +62,19 @@ const sidebars = {
       items: [
         'Raspi/Openwrt_Build',
         'Raspi/Ubuntu18'
+      ]
+    },
+    {
+      type: 'category',
+      label: '开源项目',
+      items: [
+        {
+          type: "category",
+          label: '轮足机器人',
+          items: [
+            'OpenSource/WLR/WLR_Theory'
+          ]
+        },
       ]
     },
     {

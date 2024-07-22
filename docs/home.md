@@ -13,12 +13,11 @@ title: 主页
 </a>
 
 - 👾 机器人攻城狮
-- 🛠️ C/C++语言开发，一点点Python
-- 🔬 擅长嵌入式软件开发，尤其是STM32
-- 🔭 正在开发轮足机器人的控制算法
-- 🌱 为了一个比赛正在学习SLAM...
-- 🤔 希望有轮足算法开发/ROS大佬带带我😭
-- ⚡ 一个 ROBOCONer
+- 🛠️ C/C++语言开发
+- 🔬 擅长嵌入式软件开发，如STM32
+- 🔭 正在研究视觉惯性导航系统(VINS)
+- 🤔 希望有VINS算法开发/ROS大佬带带我😭
+- ⚡ 一个老 ROBOCONer
 
 <div align="center"> 
   <img src="https://vbr.nathanchung.dev/badge?page_id=zxytql&lcolor=fff&color=000&style=for-the-badge&logo=Github&logoColor=181717&hit=false&text=Github" /> 
@@ -38,6 +37,6 @@ title: 主页
 
 #### Contact me via [email](mailto:iszhouxy@gmail.com).
 
-<p align="right"><i> <font size="3"><font color = "brown">Last update on</font>: 2024/03/04 </font></i></p>
+<p align="right"><i> <font size="3"><font color = "brown">Last update on</font>: 2024/07/22 </font></i></p>
 
 
