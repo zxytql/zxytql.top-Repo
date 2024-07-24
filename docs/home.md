@@ -8,11 +8,11 @@ title: 主页
 
 I'm **Zhou Xingyu**, currently pursuing my Master’s degree at South China University of Technology.
 
+你好，泥猴，欢迎来到我的个人站，请随意浏览~
+
 <a href = "https://github.com/zxytql">
     <img align="right" width="50%" src="https://github-readme-stats-zxytqls-projects.vercel.app/api?username=zxytql&theme=vue&show_icons=true&rank_icon=github&hide_border=true" />
 </a>
-
-你好，泥猴，欢迎来到我的个人站，请随意浏览~
 
 - 👾 机器人攻城狮
 - 🛠️ C/C++语言开发
@@ -20,7 +20,7 @@ I'm **Zhou Xingyu**, currently pursuing my Master’s degree at South China Univ
 - 🔭 正在研究视觉惯性导航系统(VINS)
 - 🤔 希望有VINS算法开发/ROS大佬带带我😭
 - ⚡ 一个老 ROBOCONer
-</br>
+<br/>
 <div align="center"> 
   <img src="https://vbr.nathanchung.dev/badge?page_id=zxytql&lcolor=fff&color=000&style=for-the-badge&logo=Github&logoColor=181717&hit=false&text=Github" /> 
   <img src="https://vbr.nathanchung.dev/badge?page_id=zxytql.top&lcolor=fff&color=000&style=for-the-badge&logo=apache spark&logoColor=E25A1C&text=zxytql.top" /> 
@@ -39,6 +39,6 @@ I'm **Zhou Xingyu**, currently pursuing my Master’s degree at South China Univ
 
 #### Contact me via [email](mailto:iszhouxy@gmail.com).
 
-<p align="right"><i> <font size="3"><font color = "brown">Last update on</font>: 2024/07/22 </font></i></p>
+<p align="right"><i> <font size="3"><font color = "brown">Last update on</font>: 2024/07/24 </font></i></p>
 
 
